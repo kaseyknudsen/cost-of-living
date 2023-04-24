@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import GetWeather from "../../compnonents/GetWeather";
+import GetWeather from "../../components/GetWeather";
 
 export default function Home() {
   const [data, setData] = useState();
