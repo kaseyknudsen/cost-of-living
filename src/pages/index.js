@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import GetWeather from "../../compnonents/GetWeather";
 
 export default function Home() {
   const [data, setData] = useState();
@@ -31,10 +32,11 @@ export default function Home() {
         <div>
           <button
             style={{ border: "2px solid black", padding: "10px" }}
-            onClick={() => console.log(data)}
+            onClick={() => console.log(data.cities[0].city_name)}
           >
             Cost of Living
           </button>
+          <GetWeather prices={data?.cities?.[0]?.city_name}/>
         </div>
       </main>
     </>
